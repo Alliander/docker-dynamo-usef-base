@@ -14,4 +14,6 @@ RUN cd $HOME \
 RUN rm -Rf $JBOSS_HOME/modules/system/layers/base/com/h2database/*
 COPY h2database $JBOSS_HOME/modules/system/layers/base/com/h2database/
 
+COPY postgresql $JBOSS_HOME/modules/system/layers/base/
+
 EXPOSE 8080
