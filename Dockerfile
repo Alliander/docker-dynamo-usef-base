@@ -11,9 +11,10 @@ RUN cd $HOME \
 && mv $HOME/wildfly-$WILDFLY_VERSION $JBOSS_HOME \
 && rm wildfly-$WILDFLY_VERSION.tar.gz
 
+#TODO: remove h2 stuff below
 RUN rm -Rf $JBOSS_HOME/modules/system/layers/base/com/h2database/*
 COPY h2database $JBOSS_HOME/modules/system/layers/base/com/h2database/
 
-COPY postgresql $JBOSS_HOME/modules/system/layers/base/
+COPY postgresql $JBOSS_HOME/modules/
 
 EXPOSE 8080
