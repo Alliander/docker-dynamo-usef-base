@@ -1,4 +1,4 @@
-FROM usefdynamo/jenkins-jnlp-slave:0.1
+FROM usefdynamo/libsodium:0.2
 
 MAINTAINER David Righart
 
