@@ -12,7 +12,6 @@ pipeline {
     stage ('Start') {
       agent any
       steps {
-        sendNotifications 'STARTED'
         sh 'env'
       }
     }
@@ -42,8 +41,11 @@ pipeline {
 
   }
   post {
-    always {
-      sendNotifications currentBuild.result
+    failure {
+      sendNotifications 'FAILURE'
+    }
+    unstable {
+      sendNotifications 'UNSTABLE'
     }
   }
 }
