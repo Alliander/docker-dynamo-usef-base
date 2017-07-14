@@ -1,4 +1,4 @@
-FROM usefdynamo/libsodium:0.2
+FROM usefdynamo/libsodium:0.5
 
 MAINTAINER David Righart
 
