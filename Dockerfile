@@ -1,4 +1,4 @@
-FROM registry.usef-dynamo.nl/usefdynamo/libsodium:0.5
+FROM registry.usef-dynamo.nl/usefdynamo/libsodium:0.6
 
 MAINTAINER David Righart
 
