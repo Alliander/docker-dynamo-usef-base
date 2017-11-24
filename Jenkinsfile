@@ -5,7 +5,7 @@ pipeline {
   agent none
   environment {
     DOCKER_IMAGE = 'usefdynamo/usef-base'
-    DOCKER_IMAGE_RELEASE_TAG = '0.6' //TODO: get latest version from registry and increase by 1 or from property file???
+    DOCKER_IMAGE_RELEASE_TAG = '0.7' //TODO: get latest version from registry and increase by 1 or from property file???
   }
   options {
     // Only keep the 10 most recent builds
