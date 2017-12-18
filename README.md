@@ -2,14 +2,7 @@
 
 Dit image bevat de basis voor USEF met LibSodium en Wildfly version 10 en Java 8.
 
-Het maken/update van de image doe je met:
-```console
-$ docker build -t usefdynamo/usef-base:0.5 .
-```
+## Release
 
-Om dit image beschikbaar te hebben in de k8s omgeving(en) moet het nog gepushed worden naar de usefdynamo repository:
-```console
-$ docker push usefdynamo/usef-base:0.5
-```
-
-*Check het versie nummer voordat je bovenstaande commando's uitvoert! De bedoeling is dat deze repo automatisch gebouwd gaat worden middels Docker Hub of Quay.io. Op dit moment is het nog niet zover en moeten wijzigingen in deze repo's handmatig gepushed worden.*
+Een nieuw versie nummer wordt gebouwd door middel van de Jenkins job, ga NIET zelf versie pushen naar DockerHub
+of onze eigen private registry.
