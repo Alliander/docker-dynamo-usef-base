@@ -1,9 +1,11 @@
-FROM registry.usef-dynamo.nl/usefdynamo/libsodium:0.7
+FROM usefdynamo/libsodium:0.8
 
 MAINTAINER David Righart
 
 ENV WILDFLY_VERSION 10.1.0.Final
 ENV JBOSS_HOME /opt/jboss/wildfly
+
+ADD VERSION .
 
 RUN cd $HOME \
 && mkdir -p /opt/jboss/wildfly \
@@ -11,10 +13,6 @@ RUN cd $HOME \
 && tar xf wildfly-$WILDFLY_VERSION.tar.gz \
 && mv $HOME/wildfly-$WILDFLY_VERSION/* $JBOSS_HOME \
 && rm wildfly-$WILDFLY_VERSION.tar.gz
-
-#TODO: remove h2 stuff below
-RUN rm -Rf $JBOSS_HOME/modules/system/layers/base/com/h2database/*
-COPY h2database $JBOSS_HOME/modules/system/layers/base/com/h2database/
 
 COPY postgresql $JBOSS_HOME/modules/
 
