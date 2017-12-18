@@ -1,5 +1,5 @@
 #!groovy
-@Library('dynamo-workflow-libs@dockerbuilds') _
+@Library('dynamo-workflow-libs@master') _
 
 dockerOnlyPipeline {
   dockerImageName = 'usefdynamo/usef-base'
